@@ -37,9 +37,8 @@ Full runout suite in `filament-runout.cfg`:
 - Status macros, runout alert strobe, print progress eye candy
 
 ### UX / extras
-- Runs Mainsail + KlipperScreen on the host (UI configs not published here)
-- Knomi 2
-- Timelapse / Crowsnest / Sonar bits as used on this machine
+- Runs Mainsail + KlipperScreen on the host (UI/host configs not published here)
+- Knomi 2 on the toolhead
 
 ---
 
