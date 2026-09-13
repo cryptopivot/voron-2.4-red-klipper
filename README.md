@@ -37,7 +37,7 @@ Full runout suite in `filament-runout.cfg`:
 - Status macros, runout alert strobe, print progress eye candy
 
 ### UX / extras
-- Mainsail + KlipperScreen
+- Runs Mainsail + KlipperScreen on the host (UI configs not published here)
 - Knomi 2
 - Timelapse / Crowsnest / Sonar bits as used on this machine
 
@@ -53,7 +53,6 @@ Full runout suite in `filament-runout.cfg`:
 | `KlickyProbe/` | Klicky + QGL helpers |
 | `nozzle_scrub-2.cfg` | Wipe / scrub |
 | `LED-*.cfg` | LED effects & status macros |
-| `mainsail.cfg` / `moonraker.conf` / `KlipperScreen.conf` | UI / host |
 
 ---
 
