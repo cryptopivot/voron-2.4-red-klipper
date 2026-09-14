@@ -64,6 +64,30 @@ Full runout suite in `filament-runout.cfg`:
 
 ---
 
+## Credits & attribution
+
+This config stands on a lot of other people’s work. Thank you.
+
+### Required plugin
+- **[Klipper LED Effects](https://github.com/julianschill/klipper-led_effects)** (`led_effects`) by **Julian Schill** — used heavily via `LED-Effects-Main.cfg` (`[led_effect]` layers) and `LED-Macros-Main.cfg` (`SET_LED_EFFECT` / `STOP_LED_EFFECTS`). Install that plugin on the host; these cfgs will not work without it.
+
+### Upstream configs / macros we adapted
+- **[Voron Design](https://github.com/VoronDesign)** — Voron 2.4 printer design, stock config patterns, and community conventions.
+- **[Klipper](https://github.com/Klipper3d/klipper)** — firmware + config language everything here targets.
+- **[Klicky Probe](https://github.com/jlas1/Klicky-Probe)** — dockable probe macros in `KlickyProbe/` (maintained lineage from **Garrettwp**, Annex magprobe work originally by **Mental**, with contributions noted in-file from **RyanG**, **Trails**, **richardjm**, and others).
+- **Voron / community nozzle scrub + purge-bucket macros** — basis for `nozzle_scrub-2.cfg` (`CLEAN_NOZZLE` / `_CLEAN_NOZZLE`); coordinates, purge gates, and LED hooks heavily customized for this machine.
+- **BigTreeTech Knomi** status helpers — starting point for `Knomi2.cfg` (toolhead display status variables / M109–M190 wrappers).
+- **Nitehawk / Stealthburner toolboard samples** — pinout and extruder section patterns adapted in `nitehawk-sbv2.cfg` (verify against *your* board revision).
+
+### This machine’s custom work (Mike + 3D Printers bot)
+- **`filament-runout.cfg`** — written for this printer (sensor, pause/runout state, heat strategy, runout-aware `RESUME`, `RUNOUT_PURGE_BUCKET`, `CHECK_FILAMENT`, LED runout alert).
+- **LED lock / status sequencing** — `_LED_LOCK` / `_LED_UNLOCK`, status macros, print-progress chamber effects, runout strobe, and fixes so pause/resume don’t leave LEDs stuck.
+- **Broad mods across the stack** — `PRINT_START` / park / purge behavior, Revo thermistor + PID notes, TMC / motion tuning, Klicky + QGL integration, and lots of small “don’t do that twice” safety fixes.
+
+If we missed someone whose snippet clearly lives on in these files, open an issue or PR and we’ll add you.
+
+---
+
 ## License / use
 
 Free to use, fork, and adapt for your own printer.  
@@ -71,4 +95,4 @@ If it saves you a weekend of debugging, star the repo and tell someone about you
 
 Built and abused in real prints — including the dumb little “I LOVE YOU BABE!” plaque that started as a filament-runout victory lap.
 
-— Mike + the 3D Printers bot that helped wrestle the macros
+— **Mike Thompson** + the **3D Printers** bot that helped wrestle the macros
